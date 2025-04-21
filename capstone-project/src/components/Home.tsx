@@ -1,6 +1,8 @@
 import "../home.css";
+import menuIcon from "../assets/menus.png";
+import userIcon from "../assets/user.png";
+
 function Home() {
-  let convoHistory = ["convo 1, convo 2, convo 3"];
   return (
     <div
       style={{
@@ -11,27 +13,15 @@ function Home() {
     >
       <nav className="navbar sticky-top bg-dark text-light">
         <div>
-          <img
-            src="src/assets/menus.png"
-            alt="Hamburger Icon"
-            className="img-fluid"
-          />
+          <img src={menuIcon} alt="Hamburger Icon" className="img-fluid" />
         </div>
         <div>
-          <h1>Local Rag UI</h1>
+          <h1 style={{ opacity: "90%" }}>Local Rag UI</h1>
         </div>
         <div>
-          <img
-            src="src/assets/user.png"
-            alt="Profile Icon"
-            className="img-fluid"
-          />
+          <img src={userIcon} alt="Profile Icon" className="img-fluid" />
         </div>
       </nav>
-      <div className="text-center mt-4">
-        <h2 className="text-light fw-bold">Say hello!</h2>
-        <p className="text-secondary fs-5">Start typing...</p>
-      </div>
     </div>
   );
 }
